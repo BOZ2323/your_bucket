@@ -13,7 +13,8 @@ state = {
         capQty: 1,
         shortsPrice: 2.99,
         shortsCost: 2.99,
-        shortsQty: 1
+        shortsQty: 1,
+        subtotal: 0
 
 }
 
@@ -70,7 +71,7 @@ state = {
             </td>
 
 
-            <td id="tshirt_cost" >{this.state.tshirtCost *  this.state.tshirtQty} </td>
+            <td id="tshirt_cost" >{this.state.tshirtPrice *  this.state.tshirtQty} </td>
         </tr>
 
         <tr>
@@ -91,7 +92,7 @@ state = {
             </td>
 
 
-            <td id="cap_cost" >{this.state.capCost *  this.state.capQty} </td>
+            <td id="cap_cost" >{this.state.capPrice *  this.state.capQty} </td>
         </tr>
         <tr>
             <td>Swim Shorts, medium</td>
@@ -111,20 +112,52 @@ state = {
             </td>
 
 
-            <td id="shorts_cost" >{this.state.shortsCost *  this.state.shortsQty} </td>
+            <td id="shorts_cost" >{this.state.shortsPrice *  this.state.shortsQty} </td>
         </tr>
 
 
+
+
+
+
+
+
+       
+      </tbody>
+      <tbody>
         <tr>
-            <td>Swim Shorts, medium</td>
-            <td id="shorts_price">3.99</td>
-            <td>
-                <input type="number" value="1" id="amount_shorts"/>
-            </td>
-            <td id="shorts_cost">3.99</td>
-        </tr>
-      +</tbody>
+              <td> Subtotal</td>
 
+              <td id="subTotal">{
+                    ((this.state.tshirtPrice * this.state.tshirtQty)+
+                    (this.state.capPrice * this.state.capQty)+
+                    (this.state.shortsPrice * this.state.shortsQty)
+                    ).toFixed(2)
+              }</td>
+        </tr>
+        <tr>
+              <td>VAT 20%</td>
+              <td id="vat">{
+                   (((this.state.tshirtPrice * this.state.tshirtQty)+
+                    (this.state.capPrice * this.state.capQty)+
+                    (this.state.shortsPrice * this.state.shortsQty)
+                    ).toFixed(2)
+                   )*0.2
+              }</td>
+        </tr>
+        <tr>
+              <td>total cost</td>
+              <td id="total_cost">{
+                    
+                    (parseInt((((this.state.tshirtPrice * this.state.tshirtQty)+
+                    (this.state.capPrice * this.state.capQty)+
+                    (this.state.shortsPrice * this.state.shortsQty)
+                    ).toFixed(2))*0.2))
+
+                
+              }</td>
+        </tr>
+      </tbody>
     </Table>  
       </div>
     )
