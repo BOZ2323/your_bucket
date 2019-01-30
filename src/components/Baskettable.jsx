@@ -11,8 +11,8 @@ state = {
         capPrice: 2.99,
         capCost: 2.99,
         capQty: 1,
-        shortsPrice: 2.99,
-        shortsCost: 2.99,
+        shortsPrice: 3.99,
+        shortsCost: 3.99,
         shortsQty: 1,
         subtotal: 0
 
@@ -71,12 +71,12 @@ state = {
             </td>
 
 
-            <td id="tshirt_cost" >{this.state.tshirtPrice *  this.state.tshirtQty} </td>
+            <td id="tshirt_cost" >{(this.state.tshirtPrice *  this.state.tshirtQty).toFixed(2)} </td>
         </tr>
 
         <tr>
             <td>Baseball Cap, onesize</td>
-            <td id="cap_price"   >1.99</td>
+            <td id="cap_price"   >2.99</td>
 
 
 
@@ -92,11 +92,11 @@ state = {
             </td>
 
 
-            <td id="cap_cost" >{this.state.capPrice *  this.state.capQty} </td>
+            <td id="cap_cost" >{(this.state.capPrice *  this.state.capQty).toFixed(2)} </td>
         </tr>
         <tr>
             <td>Swim Shorts, medium</td>
-            <td id="shorts_price"   >1.99</td>
+            <td id="shorts_price"   >3.99</td>
 
 
 
@@ -112,7 +112,7 @@ state = {
             </td>
 
 
-            <td id="shorts_cost" >{this.state.shortsPrice *  this.state.shortsQty} </td>
+            <td id="shorts_cost" >{(this.state.shortsPrice *  this.state.shortsQty).toFixed(2)} </td>
         </tr>
 
 
@@ -141,18 +141,30 @@ state = {
                    (((this.state.tshirtPrice * this.state.tshirtQty)+
                     (this.state.capPrice * this.state.capQty)+
                     (this.state.shortsPrice * this.state.shortsQty)
-                    ).toFixed(2)
                    )*0.2
+                   ).toFixed(2)
               }</td>
         </tr>
         <tr>
               <td>total cost</td>
               <td id="total_cost">{
-                    
-                    (parseInt((((this.state.tshirtPrice * this.state.tshirtQty)+
+                    ((((this.state.tshirtPrice * this.state.tshirtQty)+
                     (this.state.capPrice * this.state.capQty)+
                     (this.state.shortsPrice * this.state.shortsQty)
-                    ).toFixed(2))*0.2))
+                    ))+
+                    (((this.state.tshirtPrice * this.state.tshirtQty)+
+                    (this.state.capPrice * this.state.capQty)+
+                    (this.state.shortsPrice * this.state.shortsQty)
+                    )*0.2)).toFixed(2)
+                    
+                    // (parseInt(((this.state.tshirtPrice * this.state.tshirtQty)+
+                    // (this.state.capPrice * this.state.capQty)+
+                    // (this.state.shortsPrice * this.state.shortsQty)
+                    // ).toFixed(2)))+
+                    // (parseInt((((this.state.tshirtPrice * this.state.tshirtQty)+
+                    // (this.state.capPrice * this.state.capQty)+
+                    // (this.state.shortsPrice * this.state.shortsQty)
+                    // ).toFixed(2))*0.2))
 
                 
               }</td>
