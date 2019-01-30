@@ -48,3 +48,59 @@ h1 {
 #title {
     margin: 0 auto;
 }
+
+
+/* .btn {
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    background-color: #281e91;
+    color: white;
+    padding: 20px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 10px 10px #98989b;
+}
+
+.btn:hover {
+    box-shadow: 8px 8px #8b004c;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 8px
+} */
+
+.btn {
+    font-family: Droid;
+    -moz-box-shadow: 0px 3px 4px 0px #98989b;
+    -webkit-box-shadow: 0px 3px 4px 0px #98989b;
+    box-shadow: 0px 3px 4px 0px #98989b;
+    background-color: #281e91;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    border-color: #281e91;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    float: right;
+}
+
+.btn:hover {
+    background-color: #281e91;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
