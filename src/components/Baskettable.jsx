@@ -23,12 +23,17 @@ state = {
     this.setState({
       [e.target.name]: e.target.value
     }, () => console.log('this state:', this.state)
-    
+
     )
 
   }
 
+    // next step would be to include the font-awesome
+    // trashcans. When the trashcan is clicked, the div in front should be removed
 
+
+    // I did the styling very late in the project, if I had more time, I would have
+    // found the pound symbol and would have found out what overwrites the Droid font.
 
 
 
@@ -40,8 +45,8 @@ state = {
   render() {
     return (
       <div>
-          
-      
+
+
     <table>
       <thead>
         <tr>
@@ -52,9 +57,10 @@ state = {
         </tr>
       </thead>
 
+
       <tbody>
         <tr>
-            <td>Cotton Tshirt, medium</td>
+            <td>Cotton Tshirt, Medium</td>
             <td id="tshirt_price"   >1.99</td>
 
 
@@ -64,7 +70,7 @@ state = {
                 <input
                   name="tshirtQty"
                   type="number"
-                  defaultValue="1"  
+                  defaultValue="1"
                   id="tshirtQty"
                   onChange={this.onChangeHandler}
                 />
@@ -75,7 +81,7 @@ state = {
         </tr>
 
         <tr>
-            <td>Baseball Cap, onesize</td>
+            <td>Baseball Cap, One Size</td>
             <td id="cap_price"   >2.99</td>
 
 
@@ -85,7 +91,7 @@ state = {
                 <input
                   name="capQty"
                   type="number"
-                  defaultValue="1"  
+                  defaultValue="1"
                   id="capQty"
                   onChange={this.onChangeHandler}
                 />
@@ -95,7 +101,7 @@ state = {
             <td id="cap_cost" >{(this.state.capPrice *  this.state.capQty).toFixed(2)} </td>
         </tr>
         <tr>
-            <td>Swim Shorts, medium</td>
+            <td>Swim Shorts, Medium</td>
             <td id="shorts_price"   >3.99</td>
 
 
@@ -105,7 +111,7 @@ state = {
                 <input
                   name="shortsQty"
                   type="number"
-                  defaultValue="1"  
+                  defaultValue="1"
                   id="shortsQty"
                   onChange={this.onChangeHandler}
                 />
@@ -122,7 +128,7 @@ state = {
 
 
 
-       
+
       </tbody>
       <tbody>
         <tr>
@@ -136,7 +142,7 @@ state = {
               }</td>
         </tr>
         <tr>
-              <td>VAT 20%</td>
+              <td>VAT @ 20%</td>
               <td id="vat">{
                    (((this.state.tshirtPrice * this.state.tshirtQty)+
                     (this.state.capPrice * this.state.capQty)+
@@ -146,7 +152,7 @@ state = {
               }</td>
         </tr>
         <tr>
-              <td>total cost</td>
+              <td>Total Cost</td>
               <td id="total_cost">{
                     ((((this.state.tshirtPrice * this.state.tshirtQty)+
                     (this.state.capPrice * this.state.capQty)+
@@ -156,11 +162,11 @@ state = {
                     (this.state.capPrice * this.state.capQty)+
                     (this.state.shortsPrice * this.state.shortsQty)
                     )*0.2)).toFixed(2)
-                                 
+
               }</td>
         </tr>
       </tbody>
-    </table>  
+    </table>
       </div>
     )
   }

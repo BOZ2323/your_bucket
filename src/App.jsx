@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Logo from './components/Logo';
 import './App.css';
 import Basket from './components/Basket';
 import Baskettable from './components/Baskettable';
@@ -10,6 +10,7 @@ class App extends Component {
     render() {
         return ( <div className = "App" >
                 <div>
+                    <Logo/>
                     <Basket/>
                     <Baskettable/>
                     <Buybutton/>
