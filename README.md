@@ -1,8 +1,8 @@
 ## My Codingtest
-I used React.js for this project. React is perfect for projects where items constantly are being updated.This is where 'state' in react comes in very handy.
+I used React.js for this project. React is perfect for projects where items constantly are being updated.This is where 'state' in React comes in very handy.
 I did all of the logic for the calcuations, Cost, Subtotal and Total Cost update as soon as there is any user input.
 I didn't get around to the axios request, but have done it in the past and know how it should look like.
-The styling was the last thing I took care of, wish I had more time for that now :)
+The styling was the last thing I took care of, it learned that implementing an image in React is quite complicated and wish I had more time for the styling now :)
 
 ## To start the project : 
 In the project directory, you can run:
