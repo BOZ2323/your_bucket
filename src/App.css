@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +29,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+h1 {
+    font-size: 30px;
+    font: "Droid serif", Helvetica, Arial, serif;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin: 0 auto;
 }

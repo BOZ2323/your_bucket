@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'reactstrap';
+// import { Table } from 'reactstrap';
 
 export default class Baskettable extends Component {
 
@@ -42,7 +42,7 @@ state = {
       <div>
           
       
-    <Table>
+    <table>
       <thead>
         <tr>
             <th>Product</th>
@@ -156,21 +156,11 @@ state = {
                     (this.state.capPrice * this.state.capQty)+
                     (this.state.shortsPrice * this.state.shortsQty)
                     )*0.2)).toFixed(2)
-                    
-                    // (parseInt(((this.state.tshirtPrice * this.state.tshirtQty)+
-                    // (this.state.capPrice * this.state.capQty)+
-                    // (this.state.shortsPrice * this.state.shortsQty)
-                    // ).toFixed(2)))+
-                    // (parseInt((((this.state.tshirtPrice * this.state.tshirtQty)+
-                    // (this.state.capPrice * this.state.capQty)+
-                    // (this.state.shortsPrice * this.state.shortsQty)
-                    // ).toFixed(2))*0.2))
-
-                
+                                 
               }</td>
         </tr>
       </tbody>
-    </Table>  
+    </table>  
       </div>
     )
   }
